@@ -8,7 +8,7 @@ import './index.css';
 function App() {
   return (
     <div className="App-style">
-      <div className="Form-style">
+      <div className="Form-style" >
         <form>
           <label >
             Usuário:
