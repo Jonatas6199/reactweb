@@ -10,22 +10,45 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  position: center center;
+  
 }
+button:hover { 
+  opacity: 0.8; 
+} 
 .relative-position{
   position: relative;
   
-  height: 100px;
-  width: 300px;
-  top: 20px;
+  /*height: 100px;
+  width: 300px;*/
+  top: 30%;
   left: 45px;
 }
 .Form-style{
+ position: relative;
+ top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;  
+    height:100vh; 
+    
 }
+form.transbox {
+  position: relative;
+ top: -25%;
+  height: auto;
+  width: auto;
+  margin: 100px;
+  background-color: #ffffff;
+  border: 3px solid black;
+ opacity: 0.7;
+}
+label.stgletters{
 
+  /*margin: 5%;*/
+  font-weight: bold;
+  color: #000000;
+}
 .App-style{
   background-image: url(imgs/bussola.jpg);
  /*background-repeat: no-repeat;*/

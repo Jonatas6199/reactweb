@@ -9,21 +9,29 @@ function App() {
   return (
     <div className="App-style">
       <div className="Form-style" >
-        <form>
-          <label >
+        <form className= "transbox">
+          <label className="stgletters" >
             Usuário:
+            <p></p>
             <input  type="text" name="name" />
           </label>
-          <label>
+          <div margin="10px">
+          <label className="stgletters">
+            <p></p>
             Senha:
+            <p></p>
             <input type="password" name="password" />
           </label>
+          </div>
+          
+          <p>
+          </p>
+          <div opacity= "1">
+          <button className="button"> Login
+          </button>
+          </div>
+          
         </form>
-        <div className="relative-position">
-       <button className="button">
-
-       </button>
-      </div>
       </div>
       
     </div>
