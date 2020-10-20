@@ -7,10 +7,9 @@ import './index.css';
 
 
 //transformado o componente em um stateless component
-const App = () => <Routes/>
+//const App = () => <Routes/>
 
 // coment do nosso programa anterior 
-/*
 function App() {
   return (
     <div className="App-style">
@@ -43,6 +42,6 @@ function App() {
     </div>
   );
 }
-*/
+//*/
 
 export default App;
