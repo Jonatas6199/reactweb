@@ -1,10 +1,16 @@
 import React from 'react';
 //import utils from './utils';
+// importa as rotas da aplicação
+import Routes from './routes'; 
 import './App.css';
 import './index.css';
 
 
+//transformado o componente em um stateless component
+const App = () => <Routes/>
 
+// coment do nosso programa anterior 
+/*
 function App() {
   return (
     <div className="App-style">
@@ -37,6 +43,6 @@ function App() {
     </div>
   );
 }
-
+*/
 
 export default App;
