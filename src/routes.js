@@ -10,8 +10,7 @@ const Routes = () => (
    <BrowserRouter>
        
         <Switch>
-           <Route exact path="/" component ={() => <h1>Hello World</h1>}/>
-           <Route exact path="/teste" component ={() => 
+           <Route exact path="/" component ={() => 
            <div className="App-style">
                 <div className="Form-style" >
                     <form className= "transbox">
