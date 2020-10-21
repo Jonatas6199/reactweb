@@ -2,7 +2,7 @@
 //const axios = require('axios');
 //const app = express();
 //const cors = require('cors');
-const route = "https://localhost:5000/";
+const route = "https://gps-indoor.herokuapp.com/";
 
 //app.use(cors());
 
