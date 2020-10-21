@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App-style">
       <div className="Form-style" >
-        <form className= "transbox">
+        <div className= "transbox" >
           <label className="stgletters" >
             Usuário:
             <p></p>
@@ -37,12 +37,19 @@ function App() {
           </button>
           </div>
           
-        </form>
+        </div>
       </div>
       
     </div>
   );
 }
-*/
 
+function App() {
+  return ( <div className="App-style">
+    <button>
+      
+    </button>
+  </div>);
+}
+*/
 export default App;
