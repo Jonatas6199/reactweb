@@ -5,15 +5,20 @@ import Login from './apiroutes.js';
 /*definição das rotas : abaixo */ 
 
 function getUsername(){
-    return document.getElementById("username").value;
+
+    var value =  document.getElementById("username").value;
+    return value;
 }
 
 function getPassword(){
-    return document.getElementById("password").value;
+    var value =  document.getElementById("password").value;
+    return value;
 }
 
 function DoLogin(){
-    Login(getUsername,getPassword);
+    var username = getUsername();
+    var password = getPassword();
+    Login(username, password);
 }
 const Routes = () => (
 
