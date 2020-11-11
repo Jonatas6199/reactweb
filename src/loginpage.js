@@ -2,7 +2,6 @@ import React from 'react'
 import Login from './apiroutes.js';
 
 function getUsername(){
-
     var value =  document.getElementById("username").value;
     return value;
 }
