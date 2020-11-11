@@ -1,7 +1,5 @@
-//const express = require('express');
+import authentication from  './authentication.js';
 var axios = require('axios');
-//const app = express();
-//const cors = require('cors');
 var route = "https://gps-indoor.herokuapp.com/";
 
 //app.use(cors());
@@ -12,18 +10,17 @@ async function Login(user, password){
     var config = {
         headers: {'authorization': userInfo}
       };
-    axios.get(loginEnd,config).then((response) => {
-        console.log(response.data);
-        console.log(response.status);
-        console.log(response.statusText);
-        console.log(response.headers);
-        console.log(response.config);
+    
+      axios.get(loginEnd,config).then((response) => {
+      if(response.status === 200){
+        authentication.setLogged(true);
+      }
+      else{
+        authentication.setLogged(false);
+      }
+
       });
-   // var request = new XMLHttpRequest();
-   // request.open("GET",loginEnd);
-   // request.setRequestHeader("authorization",userInfo);
-    //await request.send();
-}
+ }
 
 export default Login
 
