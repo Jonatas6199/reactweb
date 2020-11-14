@@ -1,6 +1,6 @@
 import React from 'react'
 import {Redirect ,Route } from 'react-router-dom'
-import authentication from './authentication.js';
+import authentication from '../functions/authentication.js';
 
 export default function PrivateRoute(props){
   if (authentication.authenticated()){

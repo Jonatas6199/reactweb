@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
-import HomePage from './homepage.js';
-import LoginPage from './loginpage';
+import HomePage from '../pages/homepage.js';
+import LoginPage from '../pages/loginpage';
 import PrivateRoute from './privateroute.js';
 /*definição das rotas : abaixo */ 
 
