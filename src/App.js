@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from './routes'; 
+import Routes from './routes/routes.js'; 
 import './App.css';
 import './index.css';
 

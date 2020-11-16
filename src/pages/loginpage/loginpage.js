@@ -1,5 +1,7 @@
 import React from 'react'
-import Login from '../functions/Login.js';
+import Login from '../../functions/Login.js';
+import {useHistory} from 'react-router-dom';
+import authenticated from '../../functions/authentication.js';
 
 function getUsername(){
     var value =  document.getElementById("username").value;
@@ -11,12 +13,19 @@ function getPassword(){
     return value;
 }
 
-function DoLogin(){
+async function DoLogin(hist){
     var username = getUsername();
     var password = getPassword();
-    Login(username, password);
+    await Login(username, password);
+    if(authenticated()){
+        hist.push('/');
+    }
+    else{
+        alert('USUÁRIO OU SENHA INVÁLIDOS!!');
+    }
 }
 function LoginPage(){
+    const history = useHistory();
     return(
         <div className="App-style">
         <div className="Form-style" >
@@ -36,7 +45,7 @@ function LoginPage(){
                     </div>
                         <p></p>
                     <div opacity= "1">
-                         <button className="button" onClick= {DoLogin} > Login
+                         <button className="button" onClick= {()=> DoLogin(history)} > Login
                          </button>
                     </div>
             </div>
