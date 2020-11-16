@@ -1,8 +1,10 @@
-import authentication from  './authentication.js';
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
+
 var axios = require('axios');
 var route = "https://gps-indoor.herokuapp.com/";
 
-//app.use(cors());
 
 async function Login(user, password){
     var loginEnd = route+"user/";
@@ -11,12 +13,15 @@ async function Login(user, password){
         headers: {'authorization': userInfo}
       };
     
-      axios.get(loginEnd,config).then((response) => {
+      await axios.get(loginEnd,config).then((response) => {
       if(response.status === 200){
-        authentication.setLogged(true);
+        cookies.set('password',password);
+        cookies.set('user',user);
+        return true;
       }
       else{
-        authentication.setLogged(false);
+        cookies.set('password','');
+        return false;
       }
 
       });

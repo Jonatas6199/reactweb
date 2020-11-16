@@ -1,11 +1,17 @@
-var logged =  false;
+import Cookies from 'universal-cookie';
+import Login from './Login';
+const cookies = new Cookies();
 
-function setLogged(login){
-    logged = login;
+
+export default async function authenticated(){
+    var user = cookies.get('user');
+    var password = cookies.get('password');
+    if(typeof user === 'undefined'||typeof password === 'undefined' )
+        return false;
+        
+    if(await Login(user, password)) {
+        return true;
+    }
+    else
+        return false;
 }
-
-function authenticated(){
-    return logged;
-}
-
-module.exports = {authenticated, setLogged }; 

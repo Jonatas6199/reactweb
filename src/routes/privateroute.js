@@ -1,15 +1,22 @@
 import React from 'react'
 import {Redirect ,Route } from 'react-router-dom'
-import authentication from '../functions/authentication.js';
+import authenticated from '../functions/authentication';
 
 export default function PrivateRoute(props){
-  if (authentication.authenticated()){
-    return(
-      <Route exact={true} path={props.path} component={props.component}/>)
-  }
-  else{
-    return (
-    <Redirect to ='/login'/>)
-  }
+  var result = authenticated();
+  console.log(result);
+
+  result.then((response) => {
+    
+    if (response){
+      return(
+        <Route exact={true} path={props.path} component={props.component}/>)
+    }
+    else{
+      return (
+      <Redirect to ='/login'/>)
+    }
+  });
+ 
 }
 
