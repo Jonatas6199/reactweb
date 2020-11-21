@@ -4,7 +4,7 @@ const cookies = new Cookies();
 
 export default function authenticated(){
 var password = cookies.get('password');
-    if(password!= undefined) {
+    if(password!== undefined) {
         return true;
     }
     else
