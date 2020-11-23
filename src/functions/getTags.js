@@ -1,9 +1,9 @@
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 var axios = require('axios');
-var route = "http://localhost:5000/";
+var route = "http://localhost:5000/"
 //var route = "https://gps-indoor.herokuapp.com/";
-var insertRoute = route+"tag/";
+var insertRoute = route + "tag/";
 
 export default async function insertTag(tagId){
     var userName = cookies.get('user');
@@ -15,14 +15,10 @@ export default async function insertTag(tagId){
         body:{'tag_id':tagId}
     };
     var result;
-    if(tagId === undefined || tagId.toString().trim() === ""){
-        result = false;
-        return result;
-    }
-    await axios.post(insertRoute,config).then((response) => {
+    await axios.get(insertRoute,config).then((response) => {
         console.log(response);
         
-        if(response.data.success === true){
+        if(response.status === 200){
             result =  true;
         }
         else{
