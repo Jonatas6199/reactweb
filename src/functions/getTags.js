@@ -14,7 +14,7 @@ export default async function insertTag(tagId){
         body:{'tag_id':tagId}
     };
     var result;
-    await axios.get(insertRoute,config).then((response) => {
+    await axios.post(insertRoute,config).then((response) => {
         console.log(response);
         
         if(response.status === 200){
