@@ -1,8 +1,7 @@
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 var axios = require('axios');
-var route = "http://localhost:5000/"
-//var route = "https://gps-indoor.herokuapp.com/";
+var route = "https://gps-indoor.herokuapp.com/";
 var insertRoute = route + "tag/";
 
 export default async function insertTag(tagId){
